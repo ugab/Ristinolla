@@ -10,6 +10,6 @@ package ohha.shakki;
  *
  * @author jayl@cs
  */
-public class NewClass {
+public class Peli {
     
 }
