@@ -12,4 +12,21 @@ package ohha.shakki;
  */
 public class Peli {
     
+    private int vuoro;
+    public Pelaaja p1;
+    public Pelaaja p2;
+    public Lauta lauta;
+    
+    public Peli(Lauta lau, Pelaaja eka, Pelaaja toka){
+        
+        lauta =lau;
+        p1=eka;
+        p2=toka;
+        vuoro = 1;
+    }
+    
+    public void Vuorot(){
+        
+    }
+    
 }
