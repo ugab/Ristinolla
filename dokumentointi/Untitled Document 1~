@@ -1,7 +1,0 @@
-Aihe määrittely
-
-Toteutetaan shakkipeli. Peli on tarkoitettu kahden henkilön pelattavaksi. Ohjelma luo pelilaudan ja pelinappulat jokaisen pelin alussa.
-
- Jokaisella pelinappulalla on tietyt sallitut siirrot jotka ovat ainoita siirtoja mitkä peli hyväksyy. Siirtoja laudan ulkopuolelle ei hyväksytä, kuten ei myöskään siirtoja oman nappulan päälle. Vastustajan nappuloiden päälle siirtyminen eli niiden syöminen on mahdollista, mutta samaa ei voi tehdä omille nappuloille. 
-
- 
