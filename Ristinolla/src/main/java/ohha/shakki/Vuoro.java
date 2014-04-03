@@ -9,6 +9,8 @@ package ohha.shakki;
 /**
  *
  * @author jayl@cs
+ * 
+ * Vuoro pitää kirjaa siitä kumman pelaajan vuoro on myös vuoron vaihtaminen hoifetaan tässä luokassa
  */
 public class Vuoro {
     

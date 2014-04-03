@@ -14,14 +14,18 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+/**
+ *
+ * @author jayl@cs
+ * GUI luo graafisen käyttöliittymän ja luo nappi olion jokaiselle laudan ruudulle.
+ * 
+ */
 
 public class GUI {
        JFrame frame;
        Nappi[][] taulu;
        Lauta lauta;
        Vuoro vuoro;
-       public int pi;
-       public int pj;
        public int koko;
        public JLabel tekstialue;
 
@@ -55,8 +59,7 @@ public class GUI {
 
             for(int i=0; i<koko; i++){
                    for(int j=0; j<koko; j++){
-                       pi=i;
-                       pj=j;
+                   
                        taulu[j][i]=new Nappi(vuoro, lauta, i , j, tekstialue);
 
                        panel.add(taulu[j][i]);

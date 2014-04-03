@@ -18,6 +18,8 @@ import javax.swing.JTextArea;
 /**
  *
  * @author jayl
+ * 
+ * Nappi on pelin ruutu jota painamalla voi merkitä kyseiseen ruutuun joko ristin tai nollan.
  */
 public class Nappi extends JButton implements ActionListener {
  

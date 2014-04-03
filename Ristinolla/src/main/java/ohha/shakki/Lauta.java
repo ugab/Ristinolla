@@ -9,6 +9,9 @@ package ohha.shakki;
 /**
  *
  * @author jayl@cs
+ * 
+ * Lauta pitää kirjaa pelissä tehdyistä siirroista ja 
+ * tarkistaa joka siirron jälkeen onko voittoehto täyttynyt.
  */
 public class Lauta {
     
@@ -75,13 +78,23 @@ public class Lauta {
         }
     }
     
-    
+/**
+ * 
+ * ******       
+ * *+++** Metodi testaa tähän suuntaan onko laudalla viiden suoraa.
+ * ******    
+ * 
+ * 
+ *
+ * @param   pelaaja   Viimeisimmän merkinnän tehnyt pelaaja.
+ * @param   kor   Viimeisimmän merkinnän sijainti korkeussuunnassa
+ * @param   lev   Viimeisimmän merkinnän sijainti leveyssuunnassa
+ * 
+ * @return true jos löytyi suora false jos ei löytynyt
+ */       
     public boolean vaaka(int pelaaja, int kor, int lev){
         
-//******   
-//+++***    testaa tähän suuntaan
-//******     
-        
+
         String eka = "";
         
         int korplus=kor;
@@ -128,14 +141,24 @@ public class Lauta {
             
         
     }
-    
+  
+/**
+ * 
+ * **+***       
+ * **+*** Metodi testaa tähän suuntaan onko laudalla viiden suoraa.
+ * **+***    
+ * 
+ * 
+ *
+ * @param   pelaaja   Viimeisimmän merkinnän tehnyt pelaaja.
+ * @param   kor   Viimeisimmän merkinnän sijainti korkeussuunnassa
+ * @param   lev   Viimeisimmän merkinnän sijainti leveyssuunnassa
+ * 
+ * @return true jos löytyi suora false jos ei löytynyt
+ */       
     
     public boolean pysty(int pelaaja, int kor, int lev){
-        
-//*+**   
-//*+**    testaa tähän suuntaan
-//*+**     
-        
+             
         String eka = "";
         
         int korplus=kor+1;
@@ -182,12 +205,23 @@ public class Lauta {
         
     }    
 
-    public boolean vino(int pelaaja, int kor, int lev){
 
-//*+****   
-//**+***    testaa tähän suuntaan
-//***+**     
-        
+/**
+ * 
+ * *+****       
+ * **+*** Metodi testaa tähän suuntaan onko laudalla viiden suoraa.
+ * ***+**    
+ * 
+ * 
+ *
+ * @param   pelaaja   Viimeisimmän merkinnän tehnyt pelaaja.
+ * @param   kor   Viimeisimmän merkinnän sijainti korkeussuunnassa
+ * @param   lev   Viimeisimmän merkinnän sijainti leveyssuunnassa
+ * 
+ * @return true jos löytyi suora false jos ei löytynyt
+ */       
+    public boolean vino(int pelaaja, int kor, int lev){
+       
         String eka = "";
         
         int korplus=kor+1;
@@ -234,13 +268,25 @@ public class Lauta {
         
     }    
     
-
+/**
+ * 
+ * ***+**       
+ * **+*** Metodi testaa tähän suuntaan onko laudalla viiden suoraa.
+ * *+****    
+ * 
+ * 
+ *
+ * @param   pelaaja   Viimeisimmän merkinnän tehnyt pelaaja.
+ * @param   kor   Viimeisimmän merkinnän sijainti korkeussuunnassa
+ * @param   lev   Viimeisimmän merkinnän sijainti leveyssuunnassa
+ * 
+ * @return true jos löytyi suora false jos ei löytynyt
+ */        
+      
+    
     public boolean vino2(int pelaaja, int kor, int lev){
-//***+**       
-//**+***    testaa tähän suuntaan
-//*+****      
-        
-        
+   
+  
         
         String eka = "";
         

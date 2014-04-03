@@ -9,6 +9,9 @@ package ohha.shakki;
 /**
  *
  * @author jayl@cs
+ * 
+ * Pelaaja on yksi pelin pelaajista. Tämä luokka 
+ * pitää sisällään nimen sekä sen onko kyseinen pelaaja voittanut.
  */
 public class Pelaaja {
     
