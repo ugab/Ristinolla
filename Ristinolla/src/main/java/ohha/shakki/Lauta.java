@@ -26,7 +26,7 @@ public class Lauta {
         
     }
 
-    public boolean raapusta(Pelaaja p, int kor, int lev){
+    public boolean MerkitseRuutu(Pelaaja p, int kor, int lev){
 
         if(onkoLaudal(kor, lev)==false){
             return false;

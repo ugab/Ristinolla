@@ -44,8 +44,8 @@ public class LautaTest {
         lauta2 = new Lauta(15);
         määrätestit = new Lauta(20);
         pieni = new Lauta(2);
-        p1 = new Pelaaja(1);
-        p2 = new Pelaaja(2);
+        p1 = new Pelaaja(1, "Juntti");
+        p2 = new Pelaaja(2, "Hintti");
         
         lauta2.haelauta()[1][1]=1;
         lauta2.haelauta()[2][1]=1;
@@ -130,7 +130,7 @@ public class LautaTest {
         int kor=3;
         int lev=2;
 
-        lauta.raapusta(p2, kor, lev);
+        lauta.MerkitseRuutu(p2, kor, lev);
 
         int expResult = 2;
         int[][] la = lauta.haelauta();
@@ -148,7 +148,7 @@ public class LautaTest {
         
         lauta.haelauta()[3][2]=2;
 
-        boolean onko =lauta.raapusta(p1, kor, lev);
+        boolean onko =lauta.MerkitseRuutu(p1, kor, lev);
 
         assertEquals(false, onko);
 
@@ -158,16 +158,16 @@ public class LautaTest {
     public void test3Raapusta() {
         System.out.println("raapusta");
 
-        määrätestit.raapusta(p1, 1, 2);
-        määrätestit.raapusta(p2, 1, 3);
-        määrätestit.raapusta(p1, 1, 4);
-        määrätestit.raapusta(p2, 1, 5);
-        määrätestit.raapusta(p1, 1, 7);
-        määrätestit.raapusta(p2, 9, 1);
-        määrätestit.raapusta(p1, 5, 1);
-        määrätestit.raapusta(p2, 6, 5);
-        määrätestit.raapusta(p1, 4, 4);
-        määrätestit.raapusta(p2, 8, 7);
+        määrätestit.MerkitseRuutu(p1, 1, 2);
+        määrätestit.MerkitseRuutu(p2, 1, 3);
+        määrätestit.MerkitseRuutu(p1, 1, 4);
+        määrätestit.MerkitseRuutu(p2, 1, 5);
+        määrätestit.MerkitseRuutu(p1, 1, 7);
+        määrätestit.MerkitseRuutu(p2, 9, 1);
+        määrätestit.MerkitseRuutu(p1, 5, 1);
+        määrätestit.MerkitseRuutu(p2, 6, 5);
+        määrätestit.MerkitseRuutu(p1, 4, 4);
+        määrätestit.MerkitseRuutu(p2, 8, 7);
 
         assertEquals(10, määrätestit.montOn);
 

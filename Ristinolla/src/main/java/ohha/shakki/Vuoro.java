@@ -12,7 +12,7 @@ package ohha.shakki;
  */
 public class Vuoro {
     
-    private int vuoro;
+    public int vuoro;
     public Pelaaja p1;
     public Pelaaja p2;
     public Pelaaja jonkavuoro;

@@ -14,9 +14,11 @@ public class Pelaaja {
     
     final int kumpi;
     private boolean voitto;
+    public String nimi;
     
-    public Pelaaja(int kumpinum){
+    public Pelaaja(int kumpinum, String annettu){
         
+        nimi=annettu;
         kumpi=kumpinum;
         voitto=false;
         

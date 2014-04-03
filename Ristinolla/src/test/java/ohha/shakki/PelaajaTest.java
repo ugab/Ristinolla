@@ -25,7 +25,7 @@ public class PelaajaTest {
     Pelaaja p1;    
     @Before
     public void setUp() {
-        p1 = new Pelaaja(1);
+        p1 = new Pelaaja(1, "Juntti");
     }
 
 
@@ -33,7 +33,7 @@ public class PelaajaTest {
     @Test
     public void TestKonstruktori(){
         
-        Pelaaja p2=new Pelaaja(2);
+        Pelaaja p2=new Pelaaja(2, "Hintti");
         
         assertEquals(2, p2.haekumpi()); 
         

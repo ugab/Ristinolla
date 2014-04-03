@@ -36,8 +36,8 @@ public class VuoroTest {
     
     @Before
     public void setUp() {
-        p1=new Pelaaja(1);
-        p2=new Pelaaja(2);
+        p1=new Pelaaja(1, "Juntti");
+        p2=new Pelaaja(2, "Hintti");
         vuoro=new Vuoro(p1, p2);
         
     }
