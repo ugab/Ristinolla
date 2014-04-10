@@ -34,10 +34,10 @@ public class Nappi extends JButton implements ActionListener {
     private JLabel teksti;
    
     public Nappi (Vuoro v, Lauta l, int kor, int lev, JLabel tekstialue){
-//        X=new ImageIcon(this.getClass().getResource("resources/x1.png"));
-//        O=new ImageIcon(this.getClass().getResource("resources/o1.png"));
+//        X=new ImageIcon(this.getClass().getResource("/images/x1.png"));
+//        O=new ImageIcon(this.getClass().getResource("/images/o1.png"));
         setText(null);
-//        setIcon(X);
+        setIcon(null);
         vuoro=v;
         lauta=l;
         korkeus=kor;
@@ -65,7 +65,7 @@ public class Nappi extends JButton implements ActionListener {
 //                setIcon(X);
             }else if(vuoro.vuoro==2){
                 setText("O");
-//                setIcon(X);
+//                setIcon(O);
             }
             
             
@@ -74,6 +74,10 @@ public class Nappi extends JButton implements ActionListener {
             }else{
                 vuoro.Vuoronvaihto();
                 teksti.setText("Pelaajan: "+vuoro.jonkavuoro.nimi+" vuoro");
+            }
+            
+            if(lauta.voijatkuu==false){
+                teksti.setText("Tasapeli");
             }
             
             teksti.repaint();

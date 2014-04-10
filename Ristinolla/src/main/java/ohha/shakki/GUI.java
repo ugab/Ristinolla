@@ -44,7 +44,6 @@ public class GUI {
 
             luoKomponentit(frame, koko);
 
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.pack();
             frame.setVisible(true);   
         }
