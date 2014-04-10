@@ -34,9 +34,9 @@ public class Nappi extends JButton implements ActionListener {
     private JLabel teksti;
    
     public Nappi (Vuoro v, Lauta l, int kor, int lev, JLabel tekstialue){
-//        X=new ImageIcon(this.getClass().getResource("/images/x1.png"));
-//        O=new ImageIcon(this.getClass().getResource("/images/o1.png"));
-        setText(null);
+        X=new ImageIcon(this.getClass().getResource("/main/java/x1.png"));
+        O=new ImageIcon(this.getClass().getResource("/main/java/o1.png"));
+//        setText(null);
         setIcon(null);
         vuoro=v;
         lauta=l;
@@ -61,11 +61,11 @@ public class Nappi extends JButton implements ActionListener {
         if(tyhjä==true){
 
             if(vuoro.vuoro==1){
-                setText("X");
-//                setIcon(X);
+//                setText("X");
+                setIcon(X);
             }else if(vuoro.vuoro==2){
-                setText("O");
-//                setIcon(O);
+//                setText("O");
+                setIcon(O);
             }
             
             
