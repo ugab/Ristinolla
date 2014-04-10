@@ -44,8 +44,8 @@ public class LautaTest {
         lauta2 = new Lauta(15);
         määrätestit = new Lauta(20);
         pieni = new Lauta(2);
-        p1 = new Pelaaja(1, "Juntti");
-        p2 = new Pelaaja(2, "Hintti");
+        p1 = new Pelaaja(1, "P1");
+        p2 = new Pelaaja(2, "P2");
         
         lauta2.haelauta()[1][1]=1;
         lauta2.haelauta()[2][1]=1;
@@ -153,6 +153,8 @@ public class LautaTest {
         assertEquals(false, onko);
 
     }    
+    
+
     
     @Test
     public void test3Raapusta() {

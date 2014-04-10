@@ -14,6 +14,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
+import javax.swing.SwingConstants;
  
 /**
  *
@@ -21,50 +22,62 @@ import javax.swing.JTextArea;
  * 
  * Nappi on pelin ruutu jota painamalla voi merkitä kyseiseen ruutuun joko ristin tai nollan.
  */
+
 public class Nappi extends JButton implements ActionListener {
  
        Vuoro vuoro;    
        Lauta lauta;
     ImageIcon X, O;
-    private boolean tyhjä;
-    private int korkeus;
-    private int leveys;
+
+    private final int korkeus;
+    private final int leveys;
     private JLabel teksti;
    
     public Nappi (Vuoro v, Lauta l, int kor, int lev, JLabel tekstialue){
-//        X=new ImageIcon(this.getClass().getResource("x1.png"));
-//        O=new ImageIcon(this.getClass().getResource("o1.png"));
+//        X=new ImageIcon(this.getClass().getResource("resources/x1.png"));
+//        O=new ImageIcon(this.getClass().getResource("resources/o1.png"));
         setText(null);
+//        setIcon(X);
         vuoro=v;
         lauta=l;
-        tyhjä=true;
         korkeus=kor;
         leveys=lev;
         teksti=tekstialue;
+        
+        teksti.setText("Pelaajan: "+vuoro.jonkavuoro.nimi+" vuoro");
+        teksti.setHorizontalAlignment(SwingConstants.CENTER);
+        
         addActionListener(this);
-        teksti.setText(vuoro.jonkavuoro.nimi);
     }
    
    
     @Override
     public void actionPerformed(ActionEvent e) {
        
+        boolean tyhjä = lauta.MerkitseRuutu(vuoro.jonkavuoro, korkeus, leveys);
+        System.out.println(""+tyhjä);
+        System.out.println(""+lauta.haelauta()[korkeus][leveys]);
+
         if(tyhjä==true){
+
             if(vuoro.vuoro==1){
                 setText("X");
+//                setIcon(X);
             }else if(vuoro.vuoro==2){
                 setText("O");
+//                setIcon(X);
             }
-            lauta.MerkitseRuutu(vuoro.jonkavuoro, korkeus, leveys);
+            
+            
             if(vuoro.jonkavuoro.haevoitto()){
                 teksti.setText(vuoro.jonkavuoro.nimi+" voitti!!!!");
             }else{
                 vuoro.Vuoronvaihto();
-                teksti.setText(vuoro.jonkavuoro.nimi);   
+                teksti.setText("Pelaajan: "+vuoro.jonkavuoro.nimi+" vuoro");
             }
             
             teksti.repaint();
-            tyhjä=false;
+            
         }
        
     }

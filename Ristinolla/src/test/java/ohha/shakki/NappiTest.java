@@ -65,4 +65,13 @@ public class NappiTest {
         assertEquals("X", testi.taulu[9][9].getText());
         
     }
+    
+    @Test
+    public void testActionPerformed2() {
+        
+        testi.taulu[0][0].doClick();
+        
+        assertEquals(1, testi.lauta.haelauta()[0][0]);
+        
+    }    
 }

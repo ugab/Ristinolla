@@ -34,7 +34,7 @@ public class Lauta {
         if(onkoLaudal(kor, lev)==false){
             return false;
         }
-        
+
         if(lauta[kor][lev]!=0){
             return false;
         }else{
@@ -44,12 +44,12 @@ public class Lauta {
             tarkista(p, kor, lev);
             return true;
         }
-        
+
     }
 
     
     public boolean onkoLaudal(int lev, int kor){
-        if(kor < 0 || kor > lauta.length || lev < 0 || lev > lauta.length){
+        if(kor < 0 || kor >= lauta.length || lev < 0 || lev >= lauta.length){
             return false;
         }else{
             return true;

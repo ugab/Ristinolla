@@ -38,8 +38,7 @@ public class Vuoro {
             vuoro=1;
             jonkavuoro=p1;
         }
-            
-        
+
     }
     
     public int haevuoro(){

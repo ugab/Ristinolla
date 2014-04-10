@@ -4,6 +4,7 @@ package ohha.shakki;
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,6 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
+import javax.swing.SwingConstants;
 
 /**
  *
@@ -32,16 +34,16 @@ public class GUI {
        ImageIcon X, O, T;       
        
         GUI(int alkukoko, Pelaaja p1, Pelaaja p2){
-            
-            
-            lauta = new Lauta(5);
+
+            lauta = new Lauta(alkukoko);
             vuoro =new Vuoro(p1, p2);
             koko=alkukoko;
             frame=new JFrame("Ristinolla");
 
             tekstialue=new JLabel();
+
             luoKomponentit(frame, koko);
-            
+
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.pack();
             frame.setVisible(true);   
@@ -61,8 +63,9 @@ public class GUI {
                    for(int j=0; j<koko; j++){
                    
                        taulu[j][i]=new Nappi(vuoro, lauta, i , j, tekstialue);
-
+                       
                        panel.add(taulu[j][i]);
+                       taulu[j][i].setPreferredSize(new Dimension(50, 50));
                    }
             }
 
