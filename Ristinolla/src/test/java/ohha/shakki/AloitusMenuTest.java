@@ -34,34 +34,36 @@ public class AloitusMenuTest {
     public void tearDown() {
     }
 
-    @Test
-    public void testtarkista() {
-        // TODO review the generated test code and remove the default call to fail.
-        String koko="asd";
-        String nimi1="juntti";
-        String nimi2="juntti2";
-
-        assertEquals(aa.tarkista(koko, nimi1, nimi2), false);
-    }
-
-    @Test
-    public void testtarkista2() {
-        // TODO review the generated test code and remove the default call to fail.
-        String koko="19";
-        String nimi1="juntti";
-        String nimi2="piiiiiiiiiiitkääääääääääää kissssssaaaaaaaa";
-
-        assertEquals(aa.tarkista(koko, nimi1, nimi2), false);
-    }
-    
-    @Test
-    public void testtarkista3() {
-        // TODO review the generated test code and remove the default call to fail.
-        String koko="15";
-        String nimi1="juntti";
-        String nimi2="juntti2";
-
-        assertEquals(aa.tarkista(koko, nimi1, nimi2), true);
-    }    
+//    @Test
+//    public void testtarkista() {
+//        // TODO review the generated test code and remove the default call to fail.
+//        String koko="asd";
+//        String nimi1="juntti";
+//        String nimi2="juntti2";
+//
+//        assertEquals(aa.tarkista(koko, nimi1, nimi2), false);
+//    }
+//
+//    @Test
+//    public void testtarkista2() {
+//        // TODO review the generated test code and remove the default call to fail.
+//        String koko="19";
+//        String nimi1="juntti";
+//        String nimi2="piiiiiiiiiiitkääääääääääää kissssssaaaaaaaa";
+//
+//        
+//        
+//        assertEquals(aa.tarkista(koko, nimi1, nimi2), false);
+//    }
+//    
+//    @Test
+//    public void testtarkista3() {
+//        // TODO review the generated test code and remove the default call to fail.
+//        String koko="15";
+//        String nimi1="juntti";
+//        String nimi2="juntti2";
+//
+//        assertEquals(aa.tarkista(koko, nimi1, nimi2), true);
+//    }    
 
 }

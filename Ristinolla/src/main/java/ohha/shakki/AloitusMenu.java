@@ -29,7 +29,7 @@ public class AloitusMenu {
         frame=new JFrame("Ristinolla");
         
         luoKomponentit(frame);
-        frame.setSize(new Dimension(500, 200));
+        frame.setSize(new Dimension(600, 200));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true); 
     }
