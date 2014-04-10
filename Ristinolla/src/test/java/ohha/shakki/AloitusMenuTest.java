@@ -63,4 +63,5 @@ public class AloitusMenuTest {
 
         assertEquals(aa.tarkista(koko, nimi1, nimi2), true);
     }    
+
 }

@@ -35,7 +35,7 @@ public class AloitusMenu {
     }
 
     
-    private void luoKomponentit(Container container) {
+    public void luoKomponentit(Container container) {
         
         GridLayout layout = new GridLayout(4, 2);
         container.setLayout(layout);
