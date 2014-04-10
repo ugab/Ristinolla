@@ -1,7 +1,7 @@
 package ohha.shakki;
 
 /**
- * Luokka App printtaa "Hello World!" ja lisäksi se tekee kaikkea muuta pientä.
+ * Luokka App printtaa "Hello World!" ja lisäksi se tekee muita pikkujuttuja.
  *
  */
 public class App 

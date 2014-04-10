@@ -19,6 +19,10 @@ import javax.swing.JTextField;
 /**
  *
  * @author jayl@cs
+ * 
+ * AloitusMenu kysyy käyttäjältä pelaajien nimiä sekä laudan kokoa ja kutsuu luokkaa GUI
+ * näillä annetuilla parametreilla.
+ * 
  */
 public class AloitusMenu {
         JFrame frame;   
@@ -71,7 +75,15 @@ public class AloitusMenu {
         container.add(AloitaNappi);
     }
     
-    
+/**
+ * 
+ * @param   koko  kokokentästä löytyvä teksti.
+ * @param   nimi1   Käyttäjän syöttämä nimi nimi1kentästä.
+ * @param   nimi2   Käyttäjän syöttämä nimi nimi1kentästä.
+ * 
+ * @return true jos mikään annetuista parametreistä ei riko niille annettuja rajoitteita,
+ * muuten false.
+ */    
     public boolean tarkista(String koko, String nimi1, String nimi2){
 
         try { 

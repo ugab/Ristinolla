@@ -49,7 +49,17 @@ public class Nappi extends JButton implements ActionListener {
         
         addActionListener(this);
     }
-   
+
+/**
+ *
+ * @author jayl
+ * 
+ * actionPerformed asettaa X:n tai O:n tähän ruutuun riippuen kumman vuoro on.
+ * Jos ruudussa on jo merkki niin mitään merkintää ei tehdä eikä vuoro vaihdu.
+ * Vuoro vaihtuu aina kun merkki tehdään.
+ * 
+ */
+    
    
     @Override
     public void actionPerformed(ActionEvent e) {
