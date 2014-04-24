@@ -23,7 +23,7 @@ public class GUITest {
             
     }
     
-    private GUI testi;
+    private Ruudukko testi;
     private Pelaaja p1;
     private Pelaaja p2;
 
@@ -34,7 +34,7 @@ public class GUITest {
         p1 = new Pelaaja(1, "Juntti");
         p2 = new Pelaaja(2, "Juippi");
         
-        testi = new GUI (10, p1, p2);
+        testi = new Ruudukko (10, p1, p2);
     }
     
     @Test

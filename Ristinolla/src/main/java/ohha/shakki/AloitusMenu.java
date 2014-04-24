@@ -60,7 +60,7 @@ public class AloitusMenu {
             public void actionPerformed(ActionEvent e)
             {
                 if(tarkista(kokoKentta.getText(), nimi1Kentta.getText(), nimi2Kentta.getText()))
-                new GUI(Integer.parseInt(kokoKentta.getText()), new Pelaaja(1, nimi1Kentta.getText()), new Pelaaja(2, nimi2Kentta.getText()));
+                new Ruudukko(Integer.parseInt(kokoKentta.getText()), new Pelaaja(1, nimi1Kentta.getText()), new Pelaaja(2, nimi2Kentta.getText()));
             }
 
         });         

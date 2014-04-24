@@ -19,11 +19,11 @@ import javax.swing.SwingConstants;
 /**
  *
  * @author jayl@cs
- * GUI luo graafisen käyttöliittymän ja luo nappi olion jokaiselle laudan ruudulle.
+ * Ruudukko luo graafisen käyttöliittymän ja luo nappi olion jokaiselle laudan ruudulle.
  * 
  */
 
-public class GUI {
+public class Ruudukko {
     
        JFrame frame;
        Nappi[][] taulu;
@@ -41,7 +41,7 @@ public class GUI {
        ImageIcon X, O;
    
        
-        GUI(int alkukoko, Pelaaja p1, Pelaaja p2){
+        Ruudukko(int alkukoko, Pelaaja p1, Pelaaja p2){
 
             lauta = new Lauta(alkukoko);
             vuoro =new Vuoro(p1, p2);
@@ -141,8 +141,8 @@ public class GUI {
            panel.add(Uusipeli);
            panel.add(Xvoittoja);
            
-           Xvoittoja.setText("Voittoja"+vuoro.p2.voittoja+"");
-           Ovoittoja.setText("Voittoja"+vuoro.p1.voittoja+"");
+           Xvoittoja.setText("Voittoja "+vuoro.p2.voittoja+"");
+           Ovoittoja.setText("Voittoja "+vuoro.p1.voittoja+"");
            
            Xpelaaja.setText(vuoro.p1.nimi+" (X)");
            Opelaaja.setText(vuoro.p2.nimi+" (O)");

@@ -18,7 +18,6 @@ public class Vuoro {
     public Pelaaja p1;
     public Pelaaja p2;
     public Pelaaja jonkavuoro;
-    public Lauta lauta;
     
     public Vuoro(Pelaaja eka, Pelaaja toka){
         
