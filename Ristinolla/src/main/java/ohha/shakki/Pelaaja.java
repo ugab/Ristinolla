@@ -16,14 +16,16 @@ package ohha.shakki;
 public class Pelaaja {
     
     final int kumpi;
-    private boolean voitto;
+    public boolean voitto;
     public String nimi;
+    public int voittoja;
     
     public Pelaaja(int kumpinum, String annettu){
         
         nimi=annettu;
         kumpi=kumpinum;
         voitto=false;
+        voittoja=0;
         
     }
     

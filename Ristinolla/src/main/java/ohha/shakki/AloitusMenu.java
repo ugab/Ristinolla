@@ -50,7 +50,7 @@ public class AloitusMenu {
         JLabel nimi2Teksti = new JLabel("Anna pelaajan O nimi (1-12 merkkiä) ");
         final JTextField nimi2Kentta = new JTextField();
         
-        JLabel kokoTeksti = new JLabel("Anna pelilaudan koko (väliltä 5-20) ");
+        JLabel kokoTeksti = new JLabel("Anna pelilaudan koko (väliltä 5-30) ");
         final JTextField kokoKentta = new JTextField();
         
 
@@ -95,7 +95,7 @@ public class AloitusMenu {
         if(Integer.parseInt(koko)<5)
             return false;
         
-        if(Integer.parseInt(koko)>20)
+        if(Integer.parseInt(koko)>30)
             return false;
         
         if(nimi1.length()<1 || nimi1.length()>12)

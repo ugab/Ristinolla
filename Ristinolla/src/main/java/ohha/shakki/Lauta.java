@@ -18,14 +18,14 @@ public class Lauta {
     private int[][] lauta;
     private int montMahtuu;
     public int montOn;
-    public boolean voijatkuu;
+    public boolean täynnä;
     
     public Lauta (int koko){
         
         lauta = new int[koko][koko];
         montMahtuu=koko*koko;
         montOn=0;
-        voijatkuu=true;
+        täynnä=true;
         
     }
 
@@ -74,7 +74,7 @@ public class Lauta {
     
     public void mahtuuko(){
         if(montMahtuu==montOn){
-            voijatkuu=false;
+            täynnä=false;
         }
     }
     

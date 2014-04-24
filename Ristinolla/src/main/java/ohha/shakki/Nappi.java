@@ -33,9 +33,9 @@ public class Nappi extends JButton implements ActionListener {
     private final int leveys;
     private JLabel teksti;
    
-    public Nappi (Vuoro v, Lauta l, int kor, int lev, JLabel tekstialue){
-        X=new ImageIcon(this.getClass().getResource("/main/java/x1.png"));
-        O=new ImageIcon(this.getClass().getResource("/main/java/o1.png"));
+    public Nappi (Vuoro v, Lauta l, int kor, int lev, JLabel tekstialue, ImageIcon aX, ImageIcon aO){
+        X=aX;
+        O=aO;
 //        setText(null);
         setIcon(null);
         vuoro=v;
@@ -45,11 +45,15 @@ public class Nappi extends JButton implements ActionListener {
         teksti=tekstialue;
         
         teksti.setText("Pelaajan: "+vuoro.jonkavuoro.nimi+" vuoro");
-        teksti.setHorizontalAlignment(SwingConstants.CENTER);
         
         addActionListener(this);
     }
 
+    public void tyhjennä(){
+        setIcon(null);
+    }
+    
+    
 /**
  *
  * @author jayl
@@ -86,7 +90,7 @@ public class Nappi extends JButton implements ActionListener {
                 teksti.setText("Pelaajan: "+vuoro.jonkavuoro.nimi+" vuoro");
             }
             
-            if(lauta.voijatkuu==false){
+            if(lauta.täynnä==false && vuoro.p1.haevoitto()==false && vuoro.p2.haevoitto()==false){
                 teksti.setText("Tasapeli");
             }
             
