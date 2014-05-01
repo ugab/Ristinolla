@@ -1,6 +1,10 @@
 
-package ohha.shakki;
+package Käyttöliittymä;
 
+import Logiikka.Nappi;
+import Logiikka.Lauta;
+import Logiikka.Pelaaja;
+import Logiikka.Vuoro;
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Container;
@@ -25,12 +29,14 @@ import javax.swing.SwingConstants;
 
 public class Ruudukko {
     
-       JFrame frame;
-       Nappi[][] taulu;
-       Lauta lauta;
+       JFrame frame;     
        Vuoro vuoro;
+       public Lauta lauta;
+       public Nappi[][] taulu;
+       
        final int laudankoko;
        public int ruudunkoko;
+       
        public JLabel tekstialue;
        public JLabel Xpelaaja;
        public JLabel Opelaaja;
@@ -41,7 +47,7 @@ public class Ruudukko {
        ImageIcon X, O;
    
        
-        Ruudukko(int alkukoko, Pelaaja p1, Pelaaja p2){
+       public Ruudukko(int alkukoko, Pelaaja p1, Pelaaja p2){
 
             lauta = new Lauta(alkukoko);
             vuoro =new Vuoro(p1, p2);
@@ -109,18 +115,18 @@ public class Ruudukko {
         public void katsokoko(){
             if(laudankoko<10){
                 ruudunkoko=90;
-                X=new ImageIcon(this.getClass().getResource("/main/java/x1.png"));
-                O=new ImageIcon(this.getClass().getResource("/main/java/o1.png")); 
+                X=new ImageIcon(this.getClass().getResource("/main/java/kuvat/x1.png"));
+                O=new ImageIcon(this.getClass().getResource("/main/java/kuvat/o1.png")); 
                 
             }else if(laudankoko>=10 && laudankoko<18){
                 ruudunkoko=50;
-                X=new ImageIcon(this.getClass().getResource("/main/java/50_x1.png"));
-                O=new ImageIcon(this.getClass().getResource("/main/java/50_o1.png")); 
+                X=new ImageIcon(this.getClass().getResource("/main/java/kuvat/50_x1.png"));
+                O=new ImageIcon(this.getClass().getResource("/main/java/kuvat/50_o1.png")); 
 
             }else{    
                 ruudunkoko=27;
-                X=new ImageIcon(this.getClass().getResource("/main/java/25_x1.png"));
-                O=new ImageIcon(this.getClass().getResource("/main/java/25_o1.png"));   
+                X=new ImageIcon(this.getClass().getResource("/main/java/kuvat/25_x1.png"));
+                O=new ImageIcon(this.getClass().getResource("/main/java/kuvat/25_o1.png"));   
                 
             }            
         }

@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
  
-package ohha.shakki;
+package Logiikka;
  
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,8 +25,8 @@ import javax.swing.SwingConstants;
 
 public class Nappi extends JButton implements ActionListener {
  
-       Vuoro vuoro;    
-       Lauta lauta;
+       public Vuoro vuoro;    
+       public Lauta lauta;
     ImageIcon X, O;
 
     private final int korkeus;

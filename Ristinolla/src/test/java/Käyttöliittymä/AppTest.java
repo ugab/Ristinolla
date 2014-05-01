@@ -1,4 +1,4 @@
-package ohha.shakki;
+package Käyttöliittymä;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

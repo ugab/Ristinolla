@@ -1,4 +1,4 @@
-package ohha.shakki;
+package Käyttöliittymä;
 
 /**
  * Luokka App printtaa "Hello World!" ja lisäksi se tekee muita pikkujuttuja.

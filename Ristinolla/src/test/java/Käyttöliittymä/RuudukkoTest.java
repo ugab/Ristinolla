@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 
-package ohha.shakki;
+package Käyttöliittymä;
 
+import Käyttöliittymä.Ruudukko;
+import Logiikka.Pelaaja;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -15,34 +17,33 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author jayl@cs
+ * @author Jaakko
  */
-public class PelaajaTest {
+public class RuudukkoTest {
     
-    public PelaajaTest() {
+    public RuudukkoTest() {
+            
     }
     
-    Pelaaja p1;    
+    private Ruudukko testi;
+    private Pelaaja p1;
+    private Pelaaja p2;
+
+    
     @Before
     public void setUp() {
+        
         p1 = new Pelaaja(1, "Juntti");
-    }
-
-
-    
-    @Test
-    public void TestKonstruktori(){
+        p2 = new Pelaaja(2, "Juippi");
         
-        Pelaaja p2=new Pelaaja(2, "Hintti");
-        
-        assertEquals(2, p2.haekumpi()); 
-        
+        testi = new Ruudukko (10, p1, p2);
     }
     
     @Test
-    public void Testvoitin(){
-        assertEquals(false, p1.haevoitto()); 
-        p1.voitin();
-        assertEquals(true, p1.haevoitto()); 
+    public void testKonstruktori() {
+        
+        assertEquals(10, testi.taulu.length);
+        
     }
+    
 }

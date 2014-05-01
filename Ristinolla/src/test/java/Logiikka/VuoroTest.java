@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 
-package ohha.shakki;
+package Logiikka;
 
+import Logiikka.Pelaaja;
+import Logiikka.Vuoro;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

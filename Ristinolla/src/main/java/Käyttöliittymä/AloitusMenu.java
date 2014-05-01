@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 
-package ohha.shakki;
+package Käyttöliittymä;
 
+import Logiikka.Pelaaja;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridLayout;

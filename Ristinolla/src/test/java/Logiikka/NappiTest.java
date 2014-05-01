@@ -2,8 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ohha.shakki;
+package Logiikka;
 
+import Käyttöliittymä.Ruudukko;
+import Logiikka.Pelaaja;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import org.junit.After;
@@ -22,7 +24,7 @@ public class NappiTest {
     public NappiTest() {
     }
     
-    private Ruudukko testi;
+    public Ruudukko testi;
     private Pelaaja p1;
     private Pelaaja p2;
 
