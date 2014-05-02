@@ -29,8 +29,6 @@ public class PelaajaTest {
         p1 = new Pelaaja(1, "Juntti");
     }
 
-
-    
     @Test
     public void TestKonstruktori(){
         
@@ -46,4 +44,16 @@ public class PelaajaTest {
         p1.voitin();
         assertEquals(true, p1.haevoitto()); 
     }
+    
+    @Test
+    public void Testhaekumpi(){
+
+        assertEquals(1, p1.kumpi); 
+    }
+    
+    @Test
+    public void Testhaevoitto(){
+
+        assertEquals(false, p1.haevoitto()); 
+    }    
 }

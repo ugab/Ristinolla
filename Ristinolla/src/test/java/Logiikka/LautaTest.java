@@ -175,7 +175,18 @@ public class LautaTest {
 
         assertEquals(10, määrätestit.montOn);
 
+    } 
+    
+    @Test
+    public void testmahtuuko() {
+
+        Lauta lauta3 = new Lauta(2);
+        lauta3.MerkitseRuutu(p1, 0, 0);
+        lauta3.MerkitseRuutu(p1, 1, 0);
+        lauta3.MerkitseRuutu(p1, 1, 1);
+        lauta3.MerkitseRuutu(p1, 0, 1);
+        
+        assertEquals(lauta3.täynnä, false);
     }        
-    
-    
+     
 }
