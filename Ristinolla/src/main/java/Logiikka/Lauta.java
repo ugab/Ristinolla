@@ -28,7 +28,22 @@ public class Lauta {
         täynnä=true;
         
     }
-
+    
+    
+/**
+ * 
+ * Asettaa taulukkoon lauta anettuihin koordinaatteihin joko 1 tai 2 riippuen 
+ * siita kumpi pelaaja on kyseessä ja lisäksi kutsuu metodeja mahtuuko ja tarkista.
+ * 
+ * @param p pelaaja jonka vuoron on
+ * @param kor koordinaatti
+ * @param  lev koordinaatti
+ * 
+ * @return palauttaa true jos kyseinen ruutu on tyhjä, palauttaa false jos 
+ * koordinaatit laudan ulkopuolella tai jos ruutu ei tyhjä.
+ */    
+    
+    
     public boolean MerkitseRuutu(Pelaaja p, int kor, int lev){
 
         if(onkoLaudal(kor, lev)==false){
@@ -47,7 +62,16 @@ public class Lauta {
 
     }
 
-    
+/**
+ * 
+ * tarkistaa onko annetut koordinaatit laudalla.
+ * 
+ * @param kor koordinaatti
+ * @param  lev koordinaatti
+ * 
+ * @return palauttaa true jos koordinaatit laudalla, palauttaa false jos 
+ * koordinaatit laudan ulkopuolella.
+ */    
     public boolean onkoLaudal(int lev, int kor){
         if(kor < 0 || kor >= lauta.length || lev < 0 || lev >= lauta.length){
             return false;
@@ -57,7 +81,15 @@ public class Lauta {
         
     }    
     
-    
+/**
+ * 
+ * Tarkistetaan joka suuntaan, jos löytyy suora niin pelaaja merkataan voittaneeksi
+ * 
+ * @param pelaaja pelaaja jonka vuoron on
+ * @param kor koordinaatti
+ * @param  lev koordinaatti
+ * 
+ */        
     public void tarkista(Pelaaja pelaaja, int kor, int lev){
         
         if(vaaka(pelaaja.haekumpi(), kor, lev) || pysty(pelaaja.haekumpi(), kor, lev) || 
@@ -67,7 +99,7 @@ public class Lauta {
         }
 
 
-        //Tarkistetaan joka suuntaan, jos löytyy suora niin pelaaja merkataan voittaneeksi
+        
         
     }
     

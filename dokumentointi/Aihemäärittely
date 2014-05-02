@@ -1,7 +1,0 @@
-Aihe m√§√§rittely
-
-Toteutetaan Ristinolla. Peli on tarkoitettu kahden henkil√∂n pelattavaksi. Ohjelma luo pelilaudan pelin alussa.
-
-Kumpikin pelaaja saa oman vuoron vuorotellen kunnes peli p‰‰ttyy. Jokaisella vuorolla voi laittaa yhden merkin laudalle. Peli ei hyv‰ksy merkin laittamista ruutuun jossa on jo merkki eik‰ merkki‰ voi myˆsk‰‰n laittaa laudan ulkopuolelle. 
-
-Kun jompi kumpi pelaaja saa viisi omaa merkki‰‰n jonoon niin peli loppuu ja ohjelma ilmoittaa voittajan. 

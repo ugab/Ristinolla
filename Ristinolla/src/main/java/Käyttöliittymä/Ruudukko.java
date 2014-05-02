@@ -1,7 +1,7 @@
 
 package Käyttöliittymä;
 
-import Logiikka.Nappi;
+import Logiikka.Ruutu;
 import Logiikka.Lauta;
 import Logiikka.Pelaaja;
 import Logiikka.Vuoro;
@@ -32,7 +32,7 @@ public class Ruudukko {
        JFrame frame;     
        Vuoro vuoro;
        public Lauta lauta;
-       public Nappi[][] taulu;
+       public Ruutu[][] taulu;
        
        final int laudankoko;
        public int ruudunkoko;
@@ -59,7 +59,28 @@ public class Ruudukko {
             frame=new JFrame("Ristinolla");
             
             katsokoko();
+            uusipeli();
             
+            tekstialue=new JLabel();
+            Xpelaaja=new JLabel();
+            Opelaaja=new JLabel();
+
+            luoKomponentit(frame, laudankoko);
+
+            frame.pack();
+            frame.setVisible(true);   
+        }
+       
+       
+/**
+
+ * Uusipeli luo JButtonin jota painamalla ruudukon voi pyyhkiä tyhjäksi
+ * ja pelin voi aloittaa alusta.
+ * 
+ */
+       
+       public void uusipeli(){
+           
             Uusipeli=new JButton("Uusi peli");
             
             Uusipeli.addActionListener(new ActionListener() {
@@ -96,21 +117,15 @@ public class Ruudukko {
                     vuoro.p2.voitto=false;
                 }
 
-            });   
-            
-            
-            
-
-            tekstialue=new JLabel();
-            Xpelaaja=new JLabel();
-            Opelaaja=new JLabel();
-
-            luoKomponentit(frame, laudankoko);
-
-            frame.pack();
-            frame.setVisible(true);   
-        }
-
+            });              
+           
+       }
+       
+/**
+ *
+ * Katsokoko määrittelee ruudukon JButtoneille sopivan koon ruudukon koon mukaan.
+ * 
+ */
         
         public void katsokoko(){
             if(laudankoko<10){
@@ -136,7 +151,11 @@ public class Ruudukko {
             container.add(tekstit(), BorderLayout.NORTH);
             container.add(luoRuudukko(koko), BorderLayout.SOUTH);
         }        
-        
+/**
+ * Tekstit asettaa paikalleen itse peliruudukon ylläpuolella olevat tekstit ja 
+ * määrittelee mitä niissä lukee.
+ * 
+ */    
         private Component tekstit() {
            JPanel panel = new JPanel(new GridLayout(2,3));
            panel.add(Xpelaaja);
@@ -163,15 +182,25 @@ public class Ruudukko {
             return panel;
         }        
 
+/**
+ *
+ * @param koko ruudukon koko
+ * 
+ * luoRuudukko luo Ruutu taulukon joka on täynnä Ruutu olioita.
+ * 
+ * @return panel jossa kaikki nappi oliot on.
+ * 
+ */           
+        
         private Component luoRuudukko(int koko ) {
             JPanel panel = new JPanel(new GridLayout(koko,koko));
-            taulu=new Nappi[koko][koko];
+            taulu=new Ruutu[koko][koko];
 
 
             for(int i=0; i<koko; i++){
                    for(int j=0; j<koko; j++){
                    
-                       taulu[j][i]=new Nappi(vuoro, lauta, i , j, tekstialue, X, O);
+                       taulu[j][i]=new Ruutu(vuoro, lauta, i , j, tekstialue, X, O);
                        
                        panel.add(taulu[j][i]);
                        taulu[j][i].setPreferredSize(new Dimension(ruudunkoko, ruudunkoko));

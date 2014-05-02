@@ -19,9 +19,9 @@ import static org.junit.Assert.*;
  *
  * @author Ylinen
  */
-public class NappiTest {
+public class RuutuTest {
     
-    public NappiTest() {
+    public RuutuTest() {
     }
     
     public Ruudukko testi;

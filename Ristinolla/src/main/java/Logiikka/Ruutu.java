@@ -20,10 +20,10 @@ import javax.swing.SwingConstants;
  *
  * @author jayl
  * 
- * Nappi on pelin ruutu jota painamalla voi merkitä kyseiseen ruutuun joko ristin tai nollan.
+ * Ruutu on pelin ruutu jota painamalla voi merkitä kyseiseen ruutuun joko ristin tai nollan.
  */
 
-public class Nappi extends JButton implements ActionListener {
+public class Ruutu extends JButton implements ActionListener {
  
        public Vuoro vuoro;    
        public Lauta lauta;
@@ -32,8 +32,20 @@ public class Nappi extends JButton implements ActionListener {
     private final int korkeus;
     private final int leveys;
     private JLabel teksti;
-   
-    public Nappi (Vuoro v, Lauta l, int kor, int lev, JLabel tekstialue, ImageIcon aX, ImageIcon aO){
+
+/**
+ * @param v olio vuoro
+ * @param l olio lauta 
+ * @param kor koordinaatti
+ * @param lev koordinaatti
+ * @param tekstialue JLabel
+ * @param aX kuva rastista
+ * @param aO kuva nollasta
+ * 
+ * Konstruktori Ruutu asettaa koordinaatit, actionlistenerit sun muut.
+ * 
+ */        
+    public Ruutu (Vuoro v, Lauta l, int kor, int lev, JLabel tekstialue, ImageIcon aX, ImageIcon aO){
         X=aX;
         O=aO;
 //        setText(null);
@@ -63,14 +75,10 @@ public class Nappi extends JButton implements ActionListener {
  * Vuoro vaihtuu aina kun merkki tehdään.
  * 
  */
-    
-   
     @Override
     public void actionPerformed(ActionEvent e) {
        
         boolean tyhjä = lauta.MerkitseRuutu(vuoro.jonkavuoro, korkeus, leveys);
-        System.out.println(""+tyhjä);
-        System.out.println(""+lauta.haelauta()[korkeus][leveys]);
 
         if(tyhjä==true){
 

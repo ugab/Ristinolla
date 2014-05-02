@@ -20,6 +20,11 @@ public class Pelaaja {
     public String nimi;
     public int voittoja;
     
+/**
+ * Tekstit asettaa paikalleen itse peliruudukon ylläpuolella olevat tekstit ja 
+ * määrittelee mitä niissä lukee.
+ * 
+ */        
     public Pelaaja(int kumpinum, String annettu){
         
         nimi=annettu;
