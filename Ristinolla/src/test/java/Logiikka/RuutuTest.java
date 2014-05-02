@@ -64,10 +64,10 @@ public class RuutuTest {
 //        
 //        testi.taulu[9][9].doClick();
 //        
-//        assertEquals(testi.X, testi.taulu[9][9].getIcon());
+//        assertEquals(this.getClass().getResource("/main/java/kuvat/50_x1.png"), testi.taulu[9][9].getIcon());
 //        
 //    }
-    
+//    
     @Test
     public void testActionPerformed2() {
         

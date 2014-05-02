@@ -68,10 +68,13 @@ public class AloitusMenu {
 
         container.add(nimi1Teksti);
         container.add(nimi1Kentta);
+        
         container.add(nimi2Teksti);
         container.add(nimi2Kentta);
+        
         container.add(kokoTeksti);
         container.add(kokoKentta);
+        
         container.add(new JLabel(""));
         container.add(AloitaNappi);
     }
